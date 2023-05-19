@@ -68,7 +68,7 @@ INT main(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, INT nCmd
 	SendConsoleHelp(hConsole, argv[0], runnedAsAdmin());
 	for (INT i = 1; i < argc; ++i)
 	{
-		if (WCHAR_EXIST(argv[i], L"-dllpath"))
+		if (WCHAR_EXIST(argv[i], L"--dllpath"))
 		{
 			dllarg.dllpathArg = TRUE;
 			if (i + 1 == argc)
@@ -84,7 +84,7 @@ INT main(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, INT nCmd
 				SendConsoleError(hConsole, "[-] DLL Path isn't valid.\n");
 			}
 		}
-		else if (WCHAR_EXIST(argv[i], L"-pid") || WCHAR_EXIST(argv[i], L"-process"))
+		else if (WCHAR_EXIST(argv[i], L"--pid") || WCHAR_EXIST(argv[i], L"--process"))
 		{
 			processarg.processArg = TRUE;
 			if (i + 1 == argc)
