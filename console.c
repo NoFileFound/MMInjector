@@ -49,7 +49,7 @@ VOID SendConsoleNote(HANDLE hConsole, CONST PCHAR msg)
 VOID SendConsoleHelp(HANDLE hConsole, WCHAR* path, BOOL isAdmin)
 {
     WCHAR* getExecutableName = GetConsoleExeName(path);
-	printf("%ws - Simple Manual Map Injector made by P.A\nUsage: %ws [-dllpath X] [-process X | -pid X].\n", getExecutableName, getExecutableName);
+	printf("%ws - Simple Manual Map Injector made by Nikito3301.\nUsage: %ws [--dllpath X] [--process X | --pid X].\n", getExecutableName, getExecutableName);
     if (!isAdmin)
     {
         SendConsoleNote(hConsole, "[!] The program may not work because does not contains admin rights.\n");
